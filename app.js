@@ -75,39 +75,48 @@
 
 // const bill = 275;
 // const tip = (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
-
 // console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
 
+const calcTip = bill => (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
+console.log(calcTip(100)); 
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills);  // [125, 555, 44]
+console.log(tips);   // [18.75, 111, 8.8]
+console.log(total);  // [143.75, 666, 52.8]
 
 
 
 
 // challenge 31/08/2025::::
 // 1
-const calcAverage = (s1, s2, s3) => (s1 + s2 + s3) / 3;
+// const calcAverage = (s1, s2, s3) => (s1 + s2 + s3) / 3;
 
-// 2
-const avgDolphins1 = calcAverage(44, 23, 71);
-const avgKoalas1 = calcAverage(65, 54, 49);
-console.log("dolphins: " ,avgDolphins1 ,"koalas:", avgKoalas1)
+// // 2
+// const avgDolphins1 = calcAverage(44, 23, 71);
+// const avgKoalas1 = calcAverage(65, 54, 49);
+// console.log("dolphins: " ,avgDolphins1 ,"koalas:", avgKoalas1)
 
-// 3
-function checkWinner(avgDolphins, avgKoalas) {
-  if (avgDolphins >= 2 * avgKoalas) {
-    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-  } else if (avgKoalas >= 2 * avgDolphins) {
-    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
-  } else {
-    console.log('No team wins...');
-  }
-}
+// // 3
+// function checkWinner(avgDolphins, avgKoalas) {
+//   if (avgDolphins >= 2 * avgKoalas) {
+//     console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+//   } else if (avgKoalas >= 2 * avgDolphins) {
+//     console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+//   } else {
+//     console.log('No team wins...');
+//   }
+// }
 
-// 4.
-//  Data 1
-checkWinner(avgDolphins1, avgKoalas1);
+// // 4.
+// //  Data 1
+// checkWinner(avgDolphins1, avgKoalas1);
 
-//  Data 2
-const avgDolphins2 = calcAverage(85, 54, 41);
-const avgKoalas2 = calcAverage(23, 34, 27);
-checkWinner(avgDolphins2, avgKoalas2);
+// //  Data 2
+// const avgDolphins2 = calcAverage(85, 54, 41);
+// const avgKoalas2 = calcAverage(23, 34, 27);
+// checkWinner(avgDolphins2, avgKoalas2);
 
